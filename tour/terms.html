@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    
+    <style>
+*{margin:0 ; padding: 0; box-sizing: border-box;font-family: 'Poppins', sans-serif;list-style: none;}
+a{text-decoration: none;color: inherit;display: block;font-family: inherit;}
+.wrap{position: relative;right:0;width: 100vw;min-height: 95vh;display:flex;
+        align-items: center;background-color: #fff;color: #555;z-index: 2;transition: 0.4s;
+    }
+  .wrap.active{right:16%;}
+  .header{position: absolute;top:0;left:0;width:100vw;padding:20px 5vw;display: flex;justify-content: space-between;
+          align-items: center;border-bottom: 1px solid #aaa;}
+  .logo{width:110px;height:110px;background:#fff;border-radius: 50%;overflow: hidden;
+        box-shadow:2px 2px 4px #000000;}
+  .logo img{width:95%;height: 100%;object-fit:contain;padding-left: 5px;}
+  .logo img:hover{transform: translateY(-13px);}
+  .nav{display: flex;justify-content: space-between;}
+  .nav li{padding: 0px 40px;font-size: larger;font-weight: 400;}
+  .nav li a:hover{color:orange;}
+
+  .toggle{width: 40px;height: 40px;background: url(images/bars-solid.svg)no-repeat center;background-color: rgba(255,255,255,0.5);
+          background-size: 20px; cursor: pointer;}
+  .toggle.active{background: url(images/times-solid.svg)no-repeat center;background-size: 20px;background-color: rgba(255,255,255,0.5);}
+  @media(max-width:798px){
+    .wrap, .header{padding: 40px;}
+  }
+
+  h1{color: sandybrown;display:block;border-bottom: 3px solid seagreen;width: 60vw;margin: 0 20vw;
+        position: absolute;top: 200px;}
+.section{margin:0vw 20vw;position: absolute;top: 280px;font-size: 0.9em;height: 55vh;
+         border: 1px solid #aaa; overflow:scroll;}
+  h1::before{content: '> ';color:yellowgreen;font-weight: bold;font-size:xx-large;}
+  h2{text-align: center;}
+  h3{padding: 20px 0;}
+
+.topmenu{position: absolute;top:0;right:0;width: 13%;height: 100%;display: flex;
+        align-items: center;justify-content: start;}
+  .topmenu ul{position: relative;}
+  .topmenu ul li{margin-bottom: 15px;}
+  .topmenu ul li a{font-size: 1.3em;color: orange;font-weight: bolder;}
+  .topmenu ul li a:hover{color: #03a9f4;}
+
+.sns{width: 100vw;height:50px;color: silver; text-align: right;padding-right: 10vw;
+    border-top: 1px solid #eee;border-bottom: 1px solid #eee;line-height: 50px;}
+.text{font-size: 0.8em; color:silver;text-align: right;line-height: 40px;}
+.icon{width: 30px; height:30px;border: 1px solid silver;border-radius: 50%;
+    text-align: center;line-height: 30px;color: #fff;display: inline-block;}
+.icon i{color: silver;font-size: 1.3em;line-height: 30px;}
+.icon i:hover{color:rgb(172, 16, 16);}
+
+footer{width: 80vw;height: 110px;margin:0 auto;}
+  .left{width: 50%;margin-top: 10px;font-size: 0.7rem;float: left;}
+  p{display: inline-block;line-height: 1rem;color: #aaa;}
+  .right{width: 50%;margin-top: 10px;float:right;}
+ .info{display: flex;justify-content:space-between;}
+ .info li{list-style-type: disc;font-size: 0.6em ; font-weight: bolder;color: slategrey;
+        font-family: 'Titillium Web', sans-serif; }
+ .info li:last-child{color: rgb(179, 21, 21);}
+ .recruit{background-color: rgb(172, 16, 16);color: #fff;padding: 1px 2px;animation: blink-effect 1.3s step-end infinite; }
+  @keyframes blink-effect {
+        50% { opacity: 0; }
+      }
+ .familysite{width: 130px;height: 25px;color:white;background-color: silver;margin-top: 10px;float: right;
+            font-size: 0.7em;line-height: 20px;padding-left: 10px;line-height: 25px;}
+    </style>
+
+</head>
+<body>
+ <div class="wrap">
+     <div class="header">
+         <a class="logo" href="index.html">
+          <img src="images/tourlogo.png" alt="logo">
+         </a>
+         <ul class="nav">
+          <li><a href="about.html"> About 간다투어</a></li>
+          <li><a href="recruit.html"> 채용정보</a></li>
+          <li><a href="terms.html"> 이용약관</a></li>
+          <li><a href="tourterms.html"> 여행약관</a></li>
+          <li><a href="privacy.html"> 개인정보처리방침</a></li>
+         </ul>
+         <div class="toggle"></div>
+     </div> 
+     <h1>이용약관</h1>
+     <div class="section">
+        <h2>제 1장 총 칙</h2><br>
+        <h3>제1조 (목적)</h3>
+        본 약관은 주식회사 간다투어(이하 “회사”라 한다)가 운영하는 사이버몰과 간다투어 마일리지클럽(이하 “몰”이라 한다)에서 제공하는 서비스(이하 "서비스"라 한다)를 통합 운영하고 제공함에 있어 이용자(이하 “이용자”)와의 이용조건 및 권리 의무와 절차 및 책임사항을 규정함을 목적으로 합니다.
+        <h3>제2조(정의)</h3>
+        1. "몰"이란 ”회사”가 이용자에게 재화 또는 용역(이하 "재화"이라 함)과 서비스를 컴퓨터 등 정보통신 설비를 이용하여 사용하고 거래할 수 있도록 설정한 가상의 영업장과 웹사이트를 말하며, 아울러 인터넷쇼핑몰을 운영하는 사업자의 의미로도 사용합니다. “몰”의 웹사이트는 www.gandatour.com 이며, “회사”와 “간다투어 마일리지클럽 제휴사 및 가맹점(이하 “제휴가맹점”)”의 정책에 따라 추가/변동될 수 있습니다.
+        <br>2. "이용자"란 "몰"에 접속하여 이 약관에 따라 "몰"이 제공하는 재화 및 서비스를 이용하는 회원 및 비회원을 말합니다.
+        <br>3.“회원”이라 함은 "몰"에 본 약관과 개인정보 제공에 동의하여 회원등록을 한 자로서, "몰"의 정보를 지속적으로 제공받으며, "몰"이 제공하는 재화와 서비스를 계속적으로 이용할 수 있는 개인 및 법인을 말합니다.
+        <br>4. “비회원”이라 함은 회원에 가입하지 않고 "몰"이 제공하는 재화와 서비스를 이용하는 자를 말합니다.
+        <br>5. "이용자아이디(이하 “ID”)"라 함은 “몰”의 이용을 위하여 등록한 이메일주소 체계로 표기된 인식문자를 말합니다.
+        <br>6. "비밀번호"라 함은 “ID”회원임을 확인하고, 서비스 보안을 위해 회원이 설정하여 “몰”에 통보한 8자리 이상 16자리 이하의 영문과 숫자, 특수문자를 혼용하여 표기한 암호문자를 말합니다. 회원의 안전한 서비스를 이용을 위해 비밀번호 구성 중 유출이 쉬운 비밀번호의 이용에 관해서는 “몰”에서 일부 제한 할 수 있습니다.
+        <br>7. "본인인증수단"이라 함은 휴대폰 본인인증, 실명인증+휴대폰인증, 실명인증+이메일인증 등 “몰”에서 회원 가입, 로그인, 아이디 찾기, 비밀번호 등 변경에 필요한 서비스 보안을 위하여 “몰”이 정한 인증수단을 말합니다.
+        <br>8. "인증정보"란 “ID”, 비밀번호 설정에 필요한 정보를 말합니다.
+        <br>9. “영업일”이란 회사가 정상적으로 서비스를 제공한 날로서 대한민국 기준, 토요일, 일요일 및 법정 공휴일을 제외한 날을 말합니다.
+        <br>10. 회원의 회원가입신청이 승낙되지 않으면 가입대기중 (이하 “신청중 회원”) 상태로 분류하고 개인정보처리방침에 따라 보관/운영합니다.
+        <br>11. "제휴가맹점"은 “회사”와 제휴 계약을 체결하여 “하나투어클럽” 서비스를 운영하기로 합의한 개인 또는 법인 등을 말합니다.
+        <h3>제3조 (적용 범위 및 효력 우선순위)</h3>
+        1. 이 약관에서 제1장(총칙), 제3장(기타사항)은 전체 서비스에 적용되며, 제2장은 “몰”에서 판매되는 “재화” 중 “회사”가 통신판매중개서비스를 제공하는 상품에 한하여 적용됩니다.
+        <br>2. 제1장 및 제3장의 규정과 개별서비스인 제2장의 규정이 상충할 때에는 개별서비스 관련 규정(제2장)이 전체서비스 관련 규정(제1장 및 제3장)보다 우선적인 효력을 갖습니다.
+        <br>3. 회사는 특정 판매자와 개별적으로 이 약관 및 개별약관(이하 “약관 등”이라고 합니다.)에 규정된 내용과 다른 내용의 계약(이하 “개별약관"이라고 합니다)을 체결할 수 있습니다. 이 경우 개별약관이 일반약관에 우선하여 적용됩니다. 회사는 개별약관을 체결한 판매자에게 계약내용을 서면(전자문서 포함) 교부하거나 판매자 화면에서 확인 할 수 있도록 합니다.
+
+     </div> 
+  </div>
+  <div class="topmenu">
+    <ul>
+      <li><a href="login.html">&gt; 로그인</a></li>
+      <li><a href="signup.html">&gt; 회원가입</a></li>
+      <li><a href="cs.html">&gt; 고객센터</a></li>
+      <li><a href="mymenu.html">&gt; My Menu</a></li>
+      <li><a href="booking.html">&gt; 예약내역</a></li>
+      <li><a href="cart.html">&gt; 장바구니</a></li>
+    </ul>
+  </div>
+  <script>
+    const menuToggle = document.querySelector('.toggle')
+    const wrap = document.querySelector('.wrap')
+
+    menuToggle.addEventListener('click',() => {
+      menuToggle.classList.toggle('active')
+      wrap.classList.toggle('active')
+     })
+  </script>
+
+<div class="sns">
+    <span class="text">OFFICIAL Ganda Tour SOCIAL NETWORKS</span> 
+    <a href="" class="icon">
+      <i class="fab fa-youtube"></i>
+    </a> 
+    <a href="" class="icon">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+   <a href="" class="icon">
+      <i class="fab fa-weibo"></i>       
+   </a>
+    <a href="" class="icon">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="" class="icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
+  <footer>
+    <div class="left">
+    <img src="images/tourlogo.png" alt="logo_footer" width="55" style="vertical-align: top;">
+    <p> 주)간다투어 | 대표:김영아 | 주소:부산시 해운대구 해운대로 123번길 456 <br>
+     <b>고객센터:1577-1234 | 팩스:051-123-4567 | e-mail:support@gandatour.com<br>
+    Copyright Ganda tour All Right Reserved</p>
+   </div>
+   <div class="right">
+       <ul class="info">
+           <li><a href="about.html">ABOUT 간다투어</a></li>
+           <li><a href="recruit.html">RECRUIT </a><span class="recruit">채용중</span></li>
+           <li><a href="terms.html">이용약관</a>
+           <li><a href="tourterms.html">여행약관</a></li>
+           <li><a href="privacy.html">개인정보처리방침</a></li>
+       </ul>
+       <div class="familysite">
+            한국관광공사
+            &emsp;&emsp;&ensp;
+            &#9660;</div>
+   </div>
+</footer> 
+</body>
+</html>

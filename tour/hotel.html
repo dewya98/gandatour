@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Gugi&&family=Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<style>
+    *{margin: 0 auto;padding:0 ;font-family: 'Titillium Web', sans-serif;list-style: none;}
+a{text-decoration: none;font-family: inherit;color: inherit;display:block;}
+
+#header{width:80%;height: 110px; display: flex;flex-wrap: wrap;padding: 20px 0;}
+.logo{width: 35%;height: 110px;}
+.logo img{width:70%;height:100px;}
+.logo:hover{animation: logo 2s infinite;}
+
+@keyframes logo {
+    0%{transform: translateX(0px);} 
+    80%{transform: translateX(180px);}
+    85%{transform:translateZ(-40px);}
+    90%{transform: translateY(0px);}
+    100%{transform: translateX(0px);}  }
+    
+ .search{width:30% ;height: 110px;}
+ input[type=search]{width:80% ;height: 50px;padding:0px 10px;font-size: 1.1rem;color: lightseagreen;
+        border: 1px solid #fff;border-bottom: 3px solid #999;margin-top: 50px;}
+input:hover{background-color: #eee;}
+.login{width: 30%;height: 110px;color: #999;font-size: 0.9rem;font-weight: bold;}
+.topmenu{width: 100%;height: 50px;display: flex;margin-bottom: 5px;}
+.topmenu li{line-height: 50px;padding:0 2%;text-align: center;font-size: 0.8rem;}
+ .topmenu li:hover{color: skyblue;}
+.mymenu{width: 100%;height: 50px;display: flex;margin-bottom: 5px;border-top: 1px solid #eee}
+.mymenu li{line-height: 50px;padding:0 2%;text-align: center;}
+.mymenu li:hover{color: skyblue;}
+        
+.nav{width: 80vw;height: 50px;border-bottom:1px solid #ddd;border-top: 1px solid #ddd;}
+.menu{width: 90%;height: 50px;display: flex;font-weight: bold;font-size: 1.2rem;color: #777; }
+.menu li{line-height: 50px;}
+ .menu li:hover{color:darkcyan;}
+
+            /* 여기까지 상단프레임 */
+            
+.imgslide{width: 80vw;height: 520px;position: relative;overflow: hidden;left:0;top: 40px;}
+ .imgs{width:320vw;height: 500px;position: absolute;animation: slide 25s infinite;}
+ .imgs>img{width:80vw;height: 500px;float: left;}
+            @keyframes slide{
+                0% {0}
+                25%{transform:translateX(-80vw);}
+                50%{transform:translateX(-160vw);}
+                75%{transform: translateX(-240vw);}
+                100%{0}
+            }
+ .control{width: 300px;position: relative;z-index: 2;backdrop-filter: blur(5px);
+                top:0;left: 40%;background-color: rgba(0,0,0, 0.3);font-size: 2.2em;font-weight: bold;
+                padding: 184px 20px;font-family: 'Song Myung', serif;color: #fff; }
+
+ .card{width: 700px;height: 150px;position: absolute;top:310px;left:10px}
+ .box1{width: 150px;height: 30px;float:left;
+     border-top-right-radius: 20px;background-color: skyblue;}
+ .ticket{width: 700px;height: 105px;float:left;font-weight: bold;line-height: 40px;
+       border:3px solid #fff ;background-color:#fff; color: #aaa;}
+  .ticket td{background-color: aliceblue;padding-left: 10px;}
+  .ticket tr:nth-child(1) td:nth-child(1){background-color: #fff;}
+  .ticket tr:nth-child(1) a{display: inline-block;}
+  .ticket tr:nth-child(1) a:nth-child(1){text-decoration: underline  2px skyblue;}
+  .ticket tr:nth-child(2)>td:nth-child(2){background-color: #fff;width: 12%;text-align: center;}
+  .ticket tr:nth-child(2)>td:nth-child(4){background-color: #eee;width: 12%;text-align: center;
+          border-radius: 20px;border:1px solid #aaa;padding: 0 10px}
+  .ticket tr:nth-child(2)>td:nth-child(5){background-color: #fff;width: 12%;}
+  .ticket tr:nth-child(3)>td:nth-child(3){background-color: #fff;width: 60px;}
+  .ticket tr:nth-child(3)>td:nth-child(5){background-color: royalblue;text-align: center;color: #fff;
+      border-radius: 20px;padding: 0 10px}          
+                
+#section{width: 80vw;height: 1100px;padding: 2% 0; }
+ h1{margin: 2% 0;color: #333;font-size: 1.6em;font-weight: normal;}
+ .recommend{width: 100%;height: 400px;display: flex;justify-content: space-between;}
+ .box{width: 24%;height: 350px;font-size: 0.75rem;color: #aaa;font-weight: bold;}
+ .box img{width: 100%;height: 260px;}
+ h4{color: black;font-size: 1.1rem;margin: 5px 0;}
+ .box:hover img{transform: scale(1.05);}
+
+ 
+ .theme{width: 100%;height: 500px;position: relative;}
+ .theme-box{width: 87%;height: 330px;position: absolute;top:15%;left:13%;display: flex;}
+ .longbox{width: 24%;height: 330px;background-color: aliceblue ;font-size: 1.2em;font-weight: bold;
+        box-shadow: 5px,5px,5px,#aaa);}
+  .longbox img{width: 100%;height:280px ;}
+  .longbox:hover img{transform: scale(1.05);}
+  
+  .banner{width: 100vw;height: 50px;background-color: skyblue;color:yellow;font-weight: bold;font-size: 1.2rem;
+       line-height: 50px;text-align: center;}
+   .acnt{color: gold;animation: blink-effect 1.3s step-end infinite;}    
+                 
+           @keyframes blink-effect {
+               50% { opacity: 0; }
+                  }
+
+ .s2{margin-left: 10vw;}
+
+.section2{width: 80vw;display: flex;flex-wrap: wrap;margin-bottom: 20px;}
+.container { position: relative;width: 24%;margin-bottom: 10px;}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 200px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.container:hover .image {opacity: 0.3;}
+.container:hover .middle {opacity: 1;}
+.middle a {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;font-weight: 700;
+  padding: 16px 32px;
+}
+
+.adbox{width: 80vw;height: 150px;display: flex;justify-content: space-between;margin: 50px 10% 0px;}
+    .ad{width: 32%;height: 100%;font-size: 1.2em;font-weight: bold;}
+       .ad img{width: 100%;height:100% ;}
+       .ad:hover img{transform: scale(1.05);}
+
+.sns{width: 80vw;height:50px;color: silver; text-align: right;
+    border-top: 1px solid #aaa;line-height: 50px;}
+.text{font-size: 0.8em; color:silver;text-align: right;line-height: 40px;position: relative;}
+.icon{width: 30px; height:30px;border: 1px solid silver;border-radius: 50%;
+    text-align: center;line-height: 30px;color: #fff;display: inline-block;}
+.icon i{color: silver;font-size: 1.3em;line-height: 30px;}
+.icon i:hover{color:rgb(172, 16, 16);}
+footer{width: 80vw;border-top: 1px solid #aaa;height: 110px;margin:0 auto;}
+.left{width: 50%;margin-top: 10px;font-size: 0.7rem;float: left;}
+p{display: inline-block;line-height: 1rem;color: #aaa;}
+.right{width: 50%;margin-top: 10px;float:right;}
+.info{display: flex;justify-content:space-between;}
+.info li{list-style-type: disc;font-size: 0.6em ; font-weight: bolder;color: slategrey;
+        font-family: 'Titillium Web', sans-serif; }
+.info li:last-child{color: rgb(179, 21, 21);}
+.recruit{background-color: rgb(172, 16, 16);color: #fff;padding: 1px 2px;
+        animation: blink-effect 1.3s step-end infinite; }
+.familysite{width: 130px;height: 25px;color:white;background-color: silver;margin-top: 10px;
+    float: right;font-size: 0.7rem;line-height: 20px;padding-left: 10px;line-height: 25px;}
+
+</style>
+</head>
+<body>
+ <div id="header">
+     <div class="logo">
+         <a href="index.html">
+          <img src="images/tourlogo.png" alt="logo"></a>
+      </div>
+      <div class="search"><input type="search" value="검색어를 입력해주세요 "><i class="fas fa-search"></i></div>
+      <div class="login">
+          <ul class="topmenu">
+          <li><a href="login.html">&nbsp;로그인</a></li>
+          <li><a href="signup.html">회원가입</a></li>
+          <li><a href="cs.html">고객센터</a></li>
+         </ul>
+         <ul class="mymenu">
+             <li><a href="mymenu.html"><i class="fas fa-bars"></i> my menu</a></li>
+             <li><a href="booking.html"><i class="far fa-file-alt"></i> 예약내역</a></li>
+             <li><a href="cart.html"><i class="fas fa-shopping-cart"></i>장바구니</a></li>
+         </ul>
+       </div>
+  </div>
+    <div class="nav">
+        <ul class="menu">
+            <li><a href="domestic.html">국내여행</a></li>
+            <li><a href="intnl.html">해외여행</a></li>
+            <li><a href="flight.html">항공</a></li>
+            <li><a href="hotel.html">숙박</a></li>
+            <li><a href="train.html">철도</a></li>
+            <li><a href="event.html">이벤트/특가</a></li>
+        </ul>
+    </div>
+      <!-- 여기까지 상단프레임 -->
+   
+   <div class="imgslide">
+        <div class="imgs">
+            <img src="images/hotelslide1.webp" alt="">
+            <img src="images/hotelslide2.webp" alt="">
+            <img src="images/hotelslide3.webp" alt="">
+            <img src="images/hotelslide4.webp" alt="">
+       </div>
+         <div class="control">
+          호텔 / 리조트<br><br>
+          얼리버드 특가
+         </div>  
+         <div class="card">
+          <div class="box1"></div>
+          <table class="ticket" cellspacing="5">
+              <tr>
+                <td colspan="7">
+                  <a href="">싱글</a>&ensp;
+                  <a href="">더블</a>&ensp;
+                  <a href="">다인실</a>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><a href=""><i class="fas fa-map-marker-alt"></i> check-in</a></td>
+                <td><i class="fas fa-exchange-alt"></i></td>
+                <td colspan="2"><a href=""><i class="fas fa-map-marker-alt"></i> check-out</a></td>
+                <td><a href=""></a>재검색</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><a href=""><i class="fas fa-calendar-week"></i> 10.20(수)</a></td>
+                <td><a href=""><i class="fas fa-calendar-week"></i> 10.24(일)</a></td>
+                <td></td>
+                <td colspan="2"><a href=""><i class="fas fa-user"></i> 성인1명 / 싱글</a></td>
+                <td colspan="2"><a href="">호텔 검색</a></td>
+              </tr>
+          </table>
+        </div>          
+   </div>
+   <div id="section">
+     <h1>호텔패키지 추천상품</h1>
+     <div class="recommend">
+        <div class="box">
+          <img src="images/hotelslide2.webp" alt="">
+          <div class="caption">
+              <h4>경주 힐튼리조트 패키지</h4>
+              프렌치감성의  아늑한 인테리어의 침실과 샤워<br>
+              부스를 갖춘 욕실로 구성된 객실
+          </div>
+          </div>
+         <div class="box">
+          <img src="images/hotelslide3.webp" alt="">
+         <div class="caption">
+            <h4>제주 특급호텔 패키지</h4>
+            아늑한 침실과 로맨틱한 욕조가 있는 욕실이<br>
+            프랜치 패턴의 파티션으로 구분되어 있는 객실
+         </div>
+         </div>
+         <div class="box">
+         <img src="images/hotel01 (3).jpg" alt="">
+          <div class="caption">
+            <h4>LOUNGE PACKAGE</h4>
+            하늘과 맞닿은 곳에서 로맨틱한 무드와 함께<br>
+            특별한 칵테일과 레서피를 만나보세요.
+          </div>
+          </div>
+         <div class="box">
+          <img src="images/hotel01 (4).jpg" alt="">
+           <div class="caption">
+            <h4>미식가 패키지</h4>
+            로컬 식재료를 재해석하는 창의적인 퀴진이<br> 
+            새로운 미각의 즐거움을 선사합니다.
+          </div>
+         </div>
+      </div>
+
+      
+      <h1>테마여행</h1>
+      <div class="theme">
+        <img src="images/vertical.jpg" alt="" width="20%" height="450px">
+        <div class="theme-box">
+          <div class="longbox"><a href=""><img src="images/호캉스.jpg" alt="">
+            &emsp; #나도 간다 호캉스!
+          </a></div>
+          <div class="longbox"><a href=""><img src="images/slide1.jpg" alt="">
+            &emsp;#허니문패키지
+          </a></div> 
+          <div class="longbox"><a href=""><img src="images/효도여행.jpg" alt="">
+            &emsp;#효도여행
+          </a></div>
+          <div class="longbox"><a href=""><img src="images/가족여행.jpg.crdownload" alt="">
+            &emsp;#가족여행
+          </a></div>
+        </div>
+      </div>  
+    </div>
+      <div class="banner"><a href="">
+        코로나 <span class="acnt">Bye!</span> 자가격리 면제 국가 여행 <span class="acnt">GO GO~~!!</span> <i class="far fa-grin-wink"></i>
+      </a></div>
+      <h1 class="s2">간다 MD's PICK</h1>
+      <div class="section2">
+        <div class="container">
+          <img src="images/추천3.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="cambodia.html">동남아</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/slide5.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">미주</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/slide1.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">하와이</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/slide6.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">호주/뉴질랜드</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/japan.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">일본</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/russia.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">러시아</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/slide7.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">유럽</a>
+          </div>
+        </div>
+        <div class="container">
+          <img src="images/africa.jpg" alt="Avatar" class="image" style="width:100%">
+          <div class="middle">
+            <a href="">아프리카 / 중동</a>
+          </div>
+        </div>
+     </div>
+
+   <div class="adbox">
+    <div class="ad"><a href=""><img src="images/ev5.JPG" alt="">
+    </a></div>
+    <div class="ad"><a href=""><img src="images/ev6.JPG" alt="">
+    </a></div> 
+    <div class="ad"><a href=""><img src="images/ev7.JPG" alt="">
+    </a></div>
+  </div>
+
+   <div class="sns">
+          <span class="text">OFFICIAL Ganda Tour SOCIAL NETWORKS</span> 
+          <a href="" class="icon">
+            <i class="fab fa-youtube"></i>
+          </a> 
+          <a href="" class="icon">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+         <a href="" class="icon">
+            <i class="fab fa-weibo"></i>       
+         </a>
+          <a href="" class="icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+    </div>
+   <footer>
+       <div class="left">
+       <img src="images/tourlogo.png" alt="logo_footer" width="55" style="vertical-align: top;">
+       <p> 주)간다투어 | 대표:김영아 | 주소:부산시 해운대구 해운대로 123번길 456 <br>
+        <b>고객센터:1577-1234 | 팩스:051-123-4567 | e-mail:support@gandatour.com<br>
+       Copyright Ganda tour All Right Reserved</p>
+      </div>
+      <div class="right">
+          <ul class="info">
+            <li><a href="about.html">ABOUT 간다투어</a></li>
+            <li><a href="recruit.html">RECRUIT </a><span class="recruit">채용중</span></li>
+            <li><a href="terms.html">이용약관</a>
+            <li><a href="tourterms.html">여행약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+          <div class="familysite">
+               한국관광공사
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &#9660;</div>
+      </div>
+   </footer> 
+</body>
+</html>

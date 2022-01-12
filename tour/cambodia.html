@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Gugi&family=Song+Myung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<style>
+    *{margin: 0 auto;padding:0 ;font-family: 'Titillium Web', sans-serif;list-style: none;}
+a{text-decoration: none;font-family: inherit;color: inherit;display:inline-block;}
+
+#header{width:80%;height: 110px; display: flex;flex-wrap: wrap;padding: 20px 0;}
+.logo{width: 35%;height: 110px;}
+.logo img{width:90%;height:100px;}
+.logo:hover{animation: logo 2s infinite;}
+
+@keyframes logo {
+    0%{transform: translateX(0px);} 
+    80%{transform: translateX(180px);}
+    85%{transform:translateZ(-20px);}
+    90%{transform: translateY(0px);}
+    100%{transform: translateX(0px);}  }
+    
+.search{width:30% ;height: 110px;}
+ input[type=search]{width:80% ;height: 50px;padding:0px 10px;font-size: 1.1rem;color: lightseagreen;
+        border: 1px solid #fff;border-bottom: 3px solid #999;margin-top: 50px;}
+input:hover{background-color: #eee;}
+.login{width: 30%;height: 110px;color: #999;font-size: 0.9rem;font-weight: bold;}
+.topmenu{width: 100%;height: 50px;display: flex;margin-bottom: 5px;}
+.topmenu li{line-height: 50px;padding:0 2%;text-align: center;font-size: 0.8rem;}
+ .topmenu li:hover{color: skyblue;}
+.mymenu{width: 100%;height: 50px;display: flex;margin-bottom: 5px;border-top: 1px solid #eee}
+.mymenu li{line-height: 50px;padding:0 2%;text-align: center;}
+.mymenu li:hover{color: skyblue;}
+        
+.nav{width: 80vw;height: 50px;border-bottom:1px solid #ddd;border-top: 1px solid #ddd;}
+.menu{width: 90%;height: 50px;display: flex;font-weight: bold;font-size: 1.2rem;color: #777; }
+.menu li{line-height: 50px;}
+ .menu li:hover{color:darkcyan;}
+       /* 여기까지 상단프레임 */
+            
+#section{width: 80vw;padding-top:1%;}
+ h1{margin:2% 0 ;color: #333;font-size: 1.5em;}
+ .mapnav{display: inline-block;text-align: right;font-size: 0.8em;}
+ .mapnav a:hover{color: tomato;}
+ .plan{width: 100%;display: flex;position: relative;}
+ .side{width: 36%;height:506px ;border:1px solid #aaa;padding: 2%}
+ .side img{width: 100%;}
+ .date{width: 60%;height: 510px;}
+ .month{display: flex;height: 60px;line-height: 60px;font-weight: 700;font-size: 1.1em;}
+ .month a:hover{color: tomato;}
+ .day{display: flex;height: 50px;line-height: 50px;justify-content: space-around;}
+ .cal{width: 100%;}
+ table{width: 95%;margin: 0 5%;border:1px solid #aaa;}
+ table tr{height: 82px;}
+ table td{border:1px solid #ddd;vertical-align: top;width:13.5%;}
+ table tr:nth-child(1)>td{border:none;text-align: center;vertical-align:middle;font-weight: bold;}
+ table tr>td:nth-child(1){color: crimson;}
+ table tr>td:nth-child(7){color: blue;}
+ table td a:hover{color: tomato;}
+ .summary{width: 100%;display:inline-block;margin:20px 0;font-size:1.5em;}
+ .btn{float: right;}
+ .summary button{margin-left: 30px;padding: 10px 45px;
+        font-size: 0.8em;font-family: 'Gugi', cursive;border-radius: 30px;
+        background: tomato;color: #fff;border: none;cursor: pointer;}       
+ .summary a{margin:5px 30px}
+ .summary a:hover{color: tomato;}
+ .spec{width: 49.7%;line-height: 3rem;height: 200px;display: inline-block;}
+ span{background: #ddd;color: darkcyan;padding:5px 10px;border-radius: 10px;font-weight: 700;}
+ .bar{width: 80vw;height: 3px;color: #222;margin: 20px 0;}
+.adbox{width: 80vw;height: 150px;display: flex;justify-content: space-between;margin: 40px 10%;}
+ .ad{width: 32%;height: 100%;font-size: 1.2em;font-weight: bold;}
+       .ad img{width: 100%;height:100% ;}
+       .ad:hover img{transform: scale(1.05);}
+
+.sns{width: 80vw;height:50px;color: silver; text-align: right;
+        border-top: 1px solid #aaa;line-height: 50px;}
+ .text{font-size: 0.7em; color:silver;text-align: right;line-height: 40px;position: relative;
+    background: none;font-weight:500;}
+ .icon{width: 30px; height:30px;border: 1px solid silver;border-radius: 50%;
+    text-align: center;line-height: 30px;color: #fff;display: inline-block;}
+    .icon i{color: silver;font-size: 1.3em;line-height: 30px;}
+    .icon i:hover{color:rgb(172, 16, 16);}
+footer{width: 80vw;border-top: 1px solid #aaa;height: 110px;margin:0 auto;}
+ .left{width: 50%;margin-top: 10px;font-size: 0.7rem;float: left;}
+ p{display: inline-block;line-height: 1rem;color: #aaa;}
+ .right{width: 50%;margin-top: 10px;float:right;}
+ .info{display: flex;justify-content:space-between;}
+ .info li{list-style-type: disc;font-size: 0.6em ; font-weight: bolder;color: slategrey;
+        font-family: 'Titillium Web', sans-serif; }
+ .info li:last-child{color: rgb(179, 21, 21);}
+ .recruit{background-color: rgb(172, 16, 16);color: #fff;padding: 1px 2px;
+        animation: blink-effect 1.3s step-end infinite;border-radius: 0;display: block; }
+        @keyframes blink-effect {
+               50% { opacity: 0; }
+                  }
+ .familysite{width: 130px;height: 25px;color:white;background-color: silver;margin-top: 10px;
+    float: right;font-size: 0.7rem;line-height: 20px;padding-left: 10px;line-height: 25px;}
+
+</style>
+</head>
+<body>
+ <div id="header">
+     <div class="logo">
+         <a href="index.html">
+          <img src="images/tourlogo.png" alt="logo"></a>
+      </div>
+      <div class="search"><input type="search" value="검색어를 입력해주세요 "><i class="fas fa-search"></i></div>
+      <div class="login">
+          <ul class="topmenu">
+          <li><a href="login.html">&nbsp;로그인</a></li>
+          <li><a href="signup.html">회원가입</a></li>
+          <li><a href="cs.html">고객센터</a></li>
+         </ul>
+         <ul class="mymenu">
+             <li><a href="mymenu.html"><i class="fas fa-bars"></i> my menu</a></li>
+             <li><a href="booking.html"><i class="far fa-file-alt"></i> 예약내역</a></li>
+             <li><a href="cart.html"><i class="fas fa-shopping-cart"></i>장바구니</a></li>
+         </ul>
+       </div>
+  </div>
+    <div class="nav">
+        <ul class="menu">
+            <li><a href="domestic.html">국내여행</a></li>
+            <li><a href="intnl.html">해외여행</a></li>
+            <li><a href="flight.html">항공</a></li>
+            <li><a href="hotel.html">숙박</a></li>
+            <li><a href="train.html">철도</a></li>
+            <li><a href="event.html">이벤트/특가</a></li>
+        </ul>
+    </div>
+      <!-- 여기까지 상단프레임 -->
+ <div id="section">
+  <div class="mapnav">
+    <a href="index.html"><i class="fas fa-home"></i> 홈</a>> <a href="intnl.html">해외여행</a>>  캄보디아
+  </div>
+<h1>[캄보디아4박 5일] &starf;전일정 노옵션 노팁 구성!&starf; 특급 호텔/한식당 포함</h1>
+<div class="plan">
+  <div class="side">
+    <img src="images/추천3.jpg" alt="">
+    ■ 양국간 자가격리 해제 후 떠나는 여행<br>
+    ■ 항공+호텔+식사+일정+차량+가이드 포함 패키지<br>
+    ■ 성수기/평수기 2시즌 요금제 (지역별 상이) <br>
+    ■ 캄보디아 4박5일
+  </div>
+  <div class="date">
+    <div class="month">
+      <a href=""><</a>
+      <a href="">10월</a>
+      <a href="">11월</a>
+      <a href="">12월</a>
+      <a href="">></a>
+    </div>
+    <div class="cal">
+      <table>
+        <tr>
+          <td>일</td>
+          <td>월</td>
+          <td>화</td>
+          <td>수</td>
+          <td>목</td>
+          <td>금</td>
+          <td>토</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><a href="">
+            1<br><br>529,000~
+          </a></td>
+          <td><a href="">
+            2<br><br>
+            499,000~
+          </a></td>
+          <td><a href="">
+            3<br><br>499,000~
+          </a></td>
+          <td><a href="">
+            4<br><br>499,000~
+          </a></td>
+          <td><a href="">
+            5<br><br>549,000~
+          </a></td>
+          <td><a href="">
+            6<br><br>599,000~
+          </a></td>
+        </tr>
+        <tr>
+          <td><a href="">
+            7<br><br>549,000~
+          </a></td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+
+ <div class="summary">
+ <a href=""><i class="fas fa-share-alt"></i></a>
+ <a href=""><i class="far fa-file-pdf"></i></a><a href=""><i class="fas fa-print"></i></a>
+ <div class="btn">
+ <button><i class="fas fa-cart-arrow-down"></i>장바구니</button><button>예약하기</button>
+ </div>
+ </div>
+ <ul class="spec">
+  <li><span>교 통</span> 티웨이항공 왕복 항공권</li> 
+  <li><span>식 사</span>  현지식(캄보디아식)/한식</li>
+  <li><span>숙 박</span> 포시즌 호텔 또는 동급 (4성급 이상)</li> 
+ </ul>	
+  <ul class="spec">
+  <li><span>할인/증정</span> 간다투어 시크릿 투어패스 제공</li>
+  <li><span>관 광</span> 앙코르와트 / 툼레이더 촬영지/ 톤레삽 호수 / 수상마을</li> 	
+  <li><span>기 타</span> 100% 양도 가능 (출발일 지정 전까지 타인양도 가능) </li> 
+ </ul>
+  - 유류할증료 및 제세공과금은 유가와 환율에 따라 변동될 수 있습니다.<br>
+  - 1인 객실 사용시 추가요금 발생됩니다. <br>
+  - 1인 객실 사용료 : 200,000원 <br>
+  - 유럽인 경우 싱글베드 사용<br>
+  - 여행 기간 중 만 2세가 되는 경우 요금 별도 문의<br>
+  - 현지합류 상품은 해당 결제금액에 따라 마일리지 적립이 별도로 지급됩니다.(특별적립 제외)
+
+</div>
+ <div class="adbox">
+      <div class="ad"><a href=""><img src="images/ev5.JPG" alt="">
+      </a></div>
+      <div class="ad"><a href=""><img src="images/ev6.JPG" alt="">
+      </a></div> 
+      <div class="ad"><a href=""><img src="images/ev7.JPG" alt="">
+      </a></div>
+    </div> 
+
+ <div class="sns">
+          <span class="text">OFFICIAL Ganda Tour SOCIAL NETWORKS</span> 
+          <a href="" class="icon">
+            <i class="fab fa-youtube"></i>
+          </a> 
+          <a href="" class="icon">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+         <a href="" class="icon">
+            <i class="fab fa-weibo"></i>       
+         </a>
+          <a href="" class="icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+    </div>
+ <footer>
+       <div class="left">
+       <img src="images/tourlogo.png" alt="logo_footer" width="55" style="vertical-align: top;">
+       <p> 주)간다투어 | 대표:김영아 | 주소:부산시 해운대구 해운대로 123번길 456 <br>
+        <b>고객센터:1577-1234 | 팩스:051-123-4567 | e-mail:support@gandatour.com<br>
+       Copyright Ganda tour All Right Reserved</p>
+      </div>
+      <div class="right">
+          <ul class="info">
+            <li><a href="about.html">ABOUT 간다투어</a></li>
+            <li><a href="recruit.html">RECRUIT </a><span class="recruit">채용중</span></li>
+            <li><a href="terms.html">이용약관</a>
+            <li><a href="tourterms.html">여행약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+          <div class="familysite">
+               한국관광공사
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               &#9660;</div>
+      </div>
+ </footer> 
+</body>
+</html>

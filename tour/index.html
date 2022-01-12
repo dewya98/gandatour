@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gandatour-Go Anywhere you want</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<style>
+  *{margin:0; padding: 0; box-sizing: border-box;font-family: 'Poppins', sans-serif;list-style: none;}
+  a{text-decoration: none;color: inherit;display: block;font-family: inherit;}
+  .wrap{position: relative;right:0;width: 100vw;min-height: 95vh;display: flex;justify-content: space-between;
+        align-items: center;background-color: #111;color: #fff;z-index: 2;transition: 0.4s;}
+  .wrap.active{right:16%;}
+  .header{position: absolute;top:0;left:0;width:100%;padding:40px 50px;display: flex;justify-content: space-between;
+          align-items: center;z-index: 99;}
+  .logo{width:110px;height:110px;background:#fff;border-radius: 50%;overflow: hidden;
+        box-shadow:2px 2px 4px #000000;}
+  .logo img{width:95%;height: 100%;object-fit:contain;padding-left: 5px;}
+  .logo img:hover{transform: translateY(-13px);}
+  .toggle{width: 60px;height: 60px;background: url(images/bars-solid.svg)no-repeat center;
+          background-size: 24px; cursor: pointer;}
+  .toggle.active{background: url(images/times-solid.svg)no-repeat center;background-size: 25px;}
+  .wrap video{position: absolute;top:0;left:0;width: 100%;height: 100%;object-fit: cover;}
+  .text1{position: relative;z-index: 3;padding-left:50px;width: 100%;}
+  .text1 h4{font-size: 4em;font-weight: 800;}
+  .text1 h5{font-size: 2em;font-weight: 700;max-width: 700px;}
+  .nav{width: 100vw;height: 50px;position: absolute;bottom: 0;left:0;display: inline-block;
+       background: linear-gradient(180deg, rgba(122, 163, 168, 0.8), rgba(60, 114, 175, 0.8));
+      }
+   .menu{padding: 0 10%;display: flex; justify-content: space-between;transition:0.4s;
+        font-weight: bold;font-size: 1.2em;color: aliceblue;}
+    .menu li a{line-height: 50px;display: block;}
+    .menu li:hover{transform: translateY(-10px);color: cyan;}
+
+  @media(max-width:798px){
+    .wrap, .header{padding: 40px;}
+  }
+  .topmenu{position: absolute;top:0;right:0;width: 13%;height: 100%;display: flex;
+        align-items: center;justify-content: start;}
+  .topmenu ul{position: relative;}
+  .topmenu ul li{margin-bottom: 15px;}
+  .topmenu ul li a{font-size: 1.3em;color: orange;font-weight: bolder;}
+  .topmenu ul li a:hover{color: #03a9f4;}
+
+  #section{width: 80vw;height: 2250px;padding: 3% 0;margin:0 auto }
+h1{margin: 2% 0;color: #333;font-size: 1.6em;}
+.recommend{width: 100%;height: 300px;display: flex;flex-wrap: wrap;justify-content: space-between;}
+.box{width: 24%; height: 300px;}
+.box img{width: 100%;height: 200px;}
+.box:hover img{transform: scale(1.05);}
+
+.theme{width: 100%;height: 500px;position: relative;}
+.theme-box{width: 87%;height: 330px;position: absolute;top:15%;left:13%;display: flex;justify-content: space-between;}
+.longbox{width: 24%;height: 330px;background-color: aliceblue ;font-size: 1.2em;font-weight: bold;
+    box-shadow: 5px,5px,5px,#aaa;}
+.longbox img{width: 100%;height:280px ;}
+.longbox:hover img{transform: scale(1.05);}
+.map{width: 100%;height: 400px;display: flex;}
+.list{width: 40%;height: 400px;}
+.list li{width: 80%;height: 60px;border: 1px solid #aaa ;border-radius: 40px;margin: 15px 0 15px 7%;
+        padding: 0 7%;line-height: 60px;font-size: 1em;font-weight: bolder;color:#aaa;}
+.list li:first-child{border:2px solid orange;color: orange;}
+.list li:hover{color: orange;border:2px solid orange}
+
+.imgslide{width: 80vw;height: 530px;position: relative;overflow: hidden;left:0
+    background-image:radial-gradient(farthest side 50%, rgba(0, 0, 0, .6) , white );}
+.imgs{width:320vw;height: 500px;position: absolute;animation: slide 15s infinite;}
+.imgs>img{width:80vw;height: 500px;float: left;}
+@keyframes slide{
+    0% {0}
+    25%{transform:translateX(-80vw);}
+    50%{transform:translateX(-160vw);}
+    75%{transform: translateX(-240vw);}
+    100%{0}
+}
+.control{width: 150px;height: 30px;position: relative;z-index: 2;display: flex;
+    top:450px;left:44%}
+    .control li{width: 20px;height: 20px;border-radius: 50%;color: rgb(221, 214, 214);}
+    .control li:hover{color: maroon;}
+
+.sns{width: 80%;color: silver; text-align: right;float: right;}
+.text{font-size: 0.8em; color:silver;text-align: right;width: 700px;line-height: 30px;}
+.icon{width: 30px; height:30px;border: 1px solid silver;border-radius: 50%;
+    text-align: center;color: #fff;display: inline-block;}
+.icon i{color: silver;font-size: 1.3em;line-height: 30px;}
+.icon i:hover{color:rgb(172, 16, 16);}
+footer{width: 80%;border-top: 1px solid #aaa;height: 110px;margin:0 auto;}
+.left{width: 50%;margin-top: 10px;font-size: 0.7rem;float: left;}
+p{display: inline-block;line-height: 1rem;color: #aaa;}
+.right{width: 50%;margin-top: 10px;float:right;}
+.info{display: flex;justify-content:space-between;}
+.info li{list-style-type: disc;font-size: 0.6em ; font-weight: bolder;color: slategrey;
+        font-family: 'Titillium Web', sans-serif; }
+.info li:last-child{color: rgb(179, 21, 21);}
+.recruit{background-color: rgb(172, 16, 16);color: #fff;padding: 1px 2px;animation: blink-effect 1.3s step-end infinite; }
+  @keyframes blink-effect {
+        50% { opacity: 0; }
+      }
+.familysite{width: 130px;height: 25px;color:white;background-color: silver;margin-top: 10px;float: right;
+            font-size: 0.7em;line-height: 20px;padding-left: 10px;line-height: 25px;}
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <a class="logo" href="about.html"><img src="images/tourlogo.png" alt="logo"></a>
+      <div class="toggle"></div>
+    </div>
+    <video src="Couple Walking on a Beach Filmed with a Drone.mp4" loop autoplay></video>
+    <div class="text1">
+        <h4>GO Anywhere You want</h4>
+        <h5>간다투어와 함께 가는 새로운 세상</h5>
+   </div>
+   <div class="nav">
+    <ul class="menu">
+    <li><a href="domestic.html">국내여행</a></li>
+    <li><a href="intnl.html">해외여행</a></li>
+    <li><a href="flight.html">항공</a></li>
+    <li><a href="hotel.html">숙박</a></li>
+    <li><a href="train.html">철도</a></li>
+    <li><a href="event.html">이벤트/특가</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="topmenu">
+    <ul>
+      <li><a href="login.html">&gt; 로그인</a></li>
+      <li><a href="signup.html">&gt; 회원가입</a></li>
+      <li><a href="cs.html">&gt; 고객센터</a></li>
+      <li><a href="mymenu.html">&gt; My Menu</a></li>
+      <li><a href="booking.html">&gt; 예약내역</a></li>
+      <li><a href="cart.html">&gt; 장바구니</a></li>
+    </ul>
+  </div>
+  <script>
+    const menuToggle = document.querySelector('.toggle')
+    const wrap = document.querySelector('.wrap')
+
+    menuToggle.addEventListener('click',() => {
+      menuToggle.classList.toggle('active')
+      wrap.classList.toggle('active')
+     })
+  </script>
+
+<div id="section">
+   <h1>추천여행</h1>
+   <div class="recommend">
+      <div class="box"><a href="">
+       <img src="images/추천1.jpg" alt="">
+       <h3>티벳 4박5일</h3>
+          699,000원~</a>
+      </div>
+      <div class="box">
+      <img src="images/추천2.jpg" alt=""><a href="">
+      <h3>베네치아 4박5일</h3>
+         1,499,000원~</a>
+      </div>
+      <div class="box"><a href="cambodia.html">
+      <img src="images/추천3.jpg" alt="">
+      <h3>캄보디아 4박5일</h3>
+         499,000원~</a>
+      </div>
+      <div class="box"><a href="">
+      <img src="images/추천4.jpg" alt="">
+      <h3>프랑스 4박5일</h3>
+         1,499,000원~</a>
+      </div>
+   </div>
+   <h1>테마여행</h1>
+   <div class="theme">
+       <img src="images/vertical.jpg" alt="" width="20%" height="450px">
+       <div class="theme-box">
+        <div class="longbox"><a href=""><img src="images/호캉스.jpg" alt="">
+         &emsp; #나도 간다 호캉스!
+        </a></div>
+        <div class="longbox"><a href=""><img src="images/slide1.jpg" alt="">
+         &emsp;#허니문패키지
+         </a></div> 
+        <div class="longbox"><a href=""><img src="images/효도여행.jpg" alt="">
+         &emsp;#효도여행
+        </a></div>
+        <div class="longbox"><a href=""><img src="images/가족여행.jpg.crdownload" alt="">
+         &emsp;#가족여행
+        </a></div>
+     </div>
+   </div>  
+   <h1>간다투어 지역별 추천</h1>
+   <div class="map">
+     <img src="images/slide2.jpg" alt="" usemap="#guide" width="1200" height="400">
+     <map name="guide">
+      <area shape="rect" coords="170,140,270,280 " href="" alt="liverty">
+      <area shape="rect" coords="460,120,620,260 " href="" alt="eiffel">
+      <area shape="rect" coords="640,130,700,280 " href="" alt="pisa">
+      <area shape="rect" coords="790,140,940,280 " href="" alt="basil">
+    </map>
+    <ul class="list">
+      <li><a href="">자유의 여신상:미동부 투어 </a></li>
+      <li><a href="">에펠탑: 파리 일주일 투어</a></li>
+      <li><a href="">피사의 사탑: 이탈리아 투어</a></li>
+      <li><a href="">성 바실리 사원:러시아 투어</a></li>
+    </ul>
+   </div>
+
+   <h1>간다와 가보는 여행명소</h1>
+    <div class="imgslide">
+    <div class="imgs">
+        <img src="images/slide5.jpg" alt="">
+        <img src="images/slide7.jpg" alt="">
+        <img src="images/slide4.jpg" alt="">
+        <img src="images/slide8.jpg" alt="">
+     </div>
+     <ul class="control">
+     <li><a href="">&#9679</a></li>
+     <li><a href="">&#9679</a></li>
+     <li><a href="">&#9679</a></li>
+     <li><a href="">&#9679</a></li>
+     <li><a href="">&#9679</a></li>
+     </ul>  
+   </div>
+
+   <div class="sns">
+       <span class="text">OFFICIAL Ganda Tour SOCIAL NETWORKS</span> 
+       <a href="" class="icon">
+         <i class="fab fa-youtube"></i>
+       </a> 
+       <a href="" class="icon">
+         <i class="fab fa-facebook-square"></i>
+       </a>
+      <a href="" class="icon">
+         <i class="fab fa-weibo"></i>       
+      </a>
+       <a href="" class="icon">
+         <i class="fab fa-twitter"></i>
+       </a>
+       <a href="" class="icon">
+         <i class="fab fa-instagram"></i>
+       </a>
+   </div>
+ </div>
+<footer>
+    <div class="left">
+    <img src="images/tourlogo.png" alt="logo_footer" width="55" style="vertical-align: top;">
+    <p> 주)간다투어 | 대표:김영아 | 주소:부산시 해운대구 해운대로 123번길 456 <br>
+     <b>고객센터:1577-1234 | 팩스:051-123-4567 | e-mail:support@gandatour.com<br>
+    Copyright Ganda tour All Right Reserved</p>
+   </div>
+   <div class="right">
+       <ul class="info">
+           <li><a href="about.html">ABOUT 간다투어</a></li>
+           <li><a href="recruit.html">RECRUIT </a><span class="recruit">채용중</span></li>
+           <li><a href="terms.html">이용약관</a>
+           <li><a href="tourterms.html">여행약관</a></li>
+           <li><a href="privacy.html">개인정보처리방침</a></li>
+       </ul>
+       <div class="familysite">
+            한국관광공사
+            &emsp;&emsp;&ensp;
+            &#9660;</div>
+   </div>
+</footer> 
+</body>
+</html>

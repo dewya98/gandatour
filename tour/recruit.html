@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    
+    <style>
+*{margin:0 ; padding: 0; box-sizing: border-box;font-family: 'Poppins', sans-serif;list-style: none;}
+a{text-decoration: none;color: inherit;display: block;font-family: inherit;}
+.wrap{position: relative;right:0;width: 100vw;min-height: 95vh;display:flex;
+  background: url(images/cool-background.svg)no-repeat right bottom;background-size: 70% 82%;
+        align-items: center;background-color: #fff;color: #555;z-index: 2;transition: 0.4s;
+    }
+  .wrap.active{right:16%;}
+  .header{position: absolute;top:0;left:0;width:100vw;padding:20px 5vw;display: flex;justify-content: space-between;
+          align-items: center;border-bottom: 1px solid #aaa;}
+  .logo{width:110px;height:110px;background:#fff;border-radius: 50%;overflow: hidden;
+        box-shadow:2px 2px 4px #000000;}
+  .logo img{width:95%;height: 100%;object-fit:contain;padding-left: 5px;}
+  .logo img:hover{transform: translateY(-13px);}
+  .nav{display: flex;justify-content: space-between;}
+  .nav li{padding: 0px 40px;font-size: larger;font-weight: 400;}
+  .nav li a:hover{color:orange;}
+
+  .toggle{width: 40px;height: 40px;background: url(images/bars-solid.svg)no-repeat center;background-color: rgba(255,255,255,0.5);
+          background-size: 20px; cursor: pointer;}
+  .toggle.active{background: url(images/times-solid.svg)no-repeat center;background-size: 20px;background-color: rgba(255,255,255,0.5);}
+  @media(max-width:798px){
+    .wrap, .header{padding: 40px;}
+  }
+
+  h1{color: sandybrown;display:block;border-bottom: 3px solid seagreen;width: 28vw;margin: 0 20vw;
+        position: absolute;top: 200px;}
+.section{margin:0vw 20vw;position: absolute;top: 300px;font-size: 0.9em;height: 540px;width: 60vw;
+     }
+  h1::before{content: '> ';color:yellowgreen;font-weight: bold;font-size:xx-large;}
+  .title-nav{padding-bottom: 8px;font-size: 1.2em;display:flex}
+  .support{width:8.3em;border:1px solid #999; font-size: 1em;padding: 3px 5px;position: relative;}
+  .support>i{position: absolute;left:6em;font-size: 1.1em;line-height: 1.4em;}
+  .support:hover{background-color:#eee;}
+  .search{width:12em;border:1px solid #999; font-size: 1em;padding: 3px 5px;height: 1.95em;margin-left: 5px;}
+  .icon1{font-size: 1.2em;line-height: 1.95em;transform: translateX(-1.6em);display: inline-block;}
+  .search:hover{background-color: #eee;}
+ 
+  table tr{height: 2.2em;}
+  table th,td{font-size: 1.1em;line-height: 2.2em;border-top: 1px solid #999;text-align: center;padding: 5px 15px;}      
+  table th{color: rgb(36,100,171);border-top: 3px solid rgb(36,100,171);background-color: #eee;}
+  table tr:nth-child(2){background-color: #fff;}
+  .pager{width: 40%;text-align: center;color: #b99c45;padding-bottom: 1em;display: flex;margin: 0 auto;}
+  .pager>a>i{color: brown;}
+
+.topmenu{position: absolute;top:0;right:0;width: 13%;height: 100%;display: flex;
+        align-items: center;justify-content: start;}
+  .topmenu ul{position: relative;}
+  .topmenu ul li{margin-bottom: 15px;}
+  .topmenu ul li a{font-size: 1.3em;color: orange;font-weight: bolder;}
+  .topmenu ul li a:hover{color: #03a9f4;}
+
+.sns{width: 100vw;height:50px;color: silver; text-align: right;padding-right: 10vw;
+    border-top: 1px solid #eee;border-bottom: 1px solid #eee;line-height: 50px;}
+.text{font-size: 0.8em; color:silver;text-align: right;line-height: 40px;}
+.icon{width: 30px; height:30px;border: 1px solid silver;border-radius: 50%;
+    text-align: center;line-height: 30px;color: #fff;display: inline-block;}
+.icon i{color: silver;font-size: 1.3em;line-height: 30px;}
+.icon i:hover{color:rgb(172, 16, 16);}
+
+footer{width: 80vw;height: 110px;margin:0 auto;}
+  .left{width: 50%;margin-top: 10px;font-size: 0.7rem;float: left;}
+  p{display: inline-block;line-height: 1rem;color: #aaa;}
+ .right{width: 50%;margin-top: 10px;float:right;}
+ .info{display: flex;justify-content:space-between;}
+ .info li{list-style-type: disc;font-size: 0.6em ; font-weight: bolder;color: slategrey;
+        font-family: 'Titillium Web', sans-serif; }
+ .info li:last-child{color: rgb(179, 21, 21);}
+ .recruit{background-color: rgb(172, 16, 16);color: #fff;padding: 1px 2px;animation: blink-effect 1.3s step-end infinite; }
+  @keyframes blink-effect {
+        50% { opacity: 0; }
+      }
+ .familysite{width: 130px;height: 25px;color:white;background-color: silver;margin-top: 10px;float: right;
+            font-size: 0.7em;line-height: 20px;padding-left: 10px;line-height: 25px;}
+    </style>
+
+</head>
+<body>
+ <div class="wrap">
+     <div class="header">
+         <a class="logo" href="index.html">
+          <img src="images/tourlogo.png" alt="logo">
+         </a>
+         <ul class="nav">
+          <li><a href="about.html"> About 간다투어</a></li>
+          <li><a href="recruit.html"> 채용정보</a></li>
+          <li><a href="terms.html"> 이용약관</a></li>
+          <li><a href="tourterms.html"> 여행약관</a></li>
+          <li><a href="privacy.html"> 개인정보처리방침</a></li>
+         </ul>
+         <div class="toggle"></div>
+     </div> 
+     <h1>채용공고</h1>
+     <div class="section">
+        <div class="title-nav">
+            <a href="index.html"><i class="fas fa-home" style="font-size: 1.5em; padding: 5px;"></i></a>
+            <a href=""><div class="support">채용문의<i class="far fa-envelope"></i></div></a>
+            <input type="search" placeholder="검색하기" class="search"><span class="icon1"><i class="fas fa-search"></i></span>
+        </div> 
+        <table>
+          <tr>
+             <th>글번호</th>
+             <th>구분</th>
+             <th>모집부문</th>
+             <th>모집기간</th>
+             <th>진행상황</th>
+          </tr>
+          <tr>
+             <td>1</td>
+             <td>정기채용</td>
+             <td><a href="">간다투어와 함께 갈 직원을 모집합니다!</a> </td>
+             <td>2021.10.10 ~ 10.31</td>
+             <td>모집중</td>
+          </tr>
+         <tr><td colspan="5">
+            <div class="pager">
+            <a href="">[<i class="fas fa-angle-double-left"></i>]</a>
+            <a href="">[<i class="fas fa-angle-left"></i>]</a>
+            <a href="">[1]</a>
+            <a href="">[<i class="fas fa-angle-right"></i>]</a>
+            <a href="">[<i class="fas fa-angle-double-right"></i>]</a>
+            </div>
+         </td></tr>
+       </table>
+      </div> 
+  </div>
+  <div class="topmenu">
+    <ul>
+      <li><a href="login.html">&gt; 로그인</a></li>
+      <li><a href="signup.html">&gt; 회원가입</a></li>
+      <li><a href="cs.html">&gt; 고객센터</a></li>
+      <li><a href="mymenu.html">&gt; My Menu</a></li>
+      <li><a href="booking.html">&gt; 예약내역</a></li>
+      <li><a href="cart.html">&gt; 장바구니</a></li>
+    </ul>
+  </div>
+  <script>
+    const menuToggle = document.querySelector('.toggle')
+    const wrap = document.querySelector('.wrap')
+
+    menuToggle.addEventListener('click',() => {
+      menuToggle.classList.toggle('active')
+      wrap.classList.toggle('active')
+     })
+  </script>
+
+<div class="sns">
+    <span class="text">OFFICIAL Ganda Tour SOCIAL NETWORKS</span> 
+    <a href="" class="icon">
+      <i class="fab fa-youtube"></i>
+    </a> 
+    <a href="" class="icon">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+   <a href="" class="icon">
+      <i class="fab fa-weibo"></i>       
+   </a>
+    <a href="" class="icon">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="" class="icon">
+      <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
+  <footer>
+    <div class="left">
+    <img src="images/tourlogo.png" alt="logo_footer" width="55" style="vertical-align: top;">
+    <p> 주)간다투어 | 대표:김영아 | 주소:부산시 해운대구 해운대로 123번길 456 <br>
+     <b>고객센터:1577-1234 | 팩스:051-123-4567 | e-mail:support@gandatour.com<br>
+    Copyright Ganda tour All Right Reserved</p>
+   </div>
+   <div class="right">
+       <ul class="info">
+           <li><a href="about.html">ABOUT 간다투어</a></li>
+           <li><a href="recruit.html">RECRUIT </a><span class="recruit">채용중</span></li>
+           <li><a href="terms.html">이용약관</a>
+           <li><a href="tourterms.html">여행약관</a></li>
+           <li><a href="privacy.html">개인정보처리방침</a></li>
+       </ul>
+       <div class="familysite">
+            한국관광공사
+            &emsp;&emsp;&ensp;
+            &#9660;</div>
+   </div>
+</footer> 
+</body>
+</html>
